@@ -1,0 +1,33 @@
+#container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 650px;
+    max-width: 651px;
+    align-self: center;
+}
+
+body {
+    justify-content: center;
+    display: flex;
+}
+
+#container div {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px;
+
+}
+
+.grid {
+    display: flex;
+    margin: 10px;
+}
+
+div {
+    border: 5px;
+    border-color: black;
+}
+
