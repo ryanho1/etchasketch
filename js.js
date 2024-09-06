@@ -1,14 +1,25 @@
 const container = document.querySelector("#container");
-// container.style.backgroundColor = "grey";
-container.style.borderColor = "black";
+// const grid = document.getElementById("grid");
 
-function Grid() {
-    for (let i = 0; i<256; i++){
+
+//magic number - fix in future
+function Grid(rows,columns) {
+    for (let i = 0; i<(rows*columns); i++){
         const grid = document.createElement("div");
         grid.classList.add("grid");
         container.appendChild(grid);
-        grid.textContent = "i";
+        // grid.textContent = i;
+        grid.addEventListener("mouseover", (event) => {
+            grid.setAttribute("style", "background: black;");
+        });
+        
+        grid.addEventListener("mouseout", (event) => {
+            grid.setAttribute("");
+            });
     }
+
+    
 }
 
-Grid();
+
+Grid(16,16);
