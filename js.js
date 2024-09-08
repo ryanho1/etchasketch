@@ -1,25 +1,29 @@
 const container = document.querySelector("#container");
-// const grid = document.getElementById("grid");
+const userInput = document.querySelector("#userInput");
+
+let input = 0;
+
+function Grid(input,input) {
 
 
-//magic number - fix in future
-function Grid(rows,columns) {
-    for (let i = 0; i<(rows*columns); i++){
+
+    for (let i = 0; i<(input*input); i++){
+    userInput.addEventListener("click", () =>  {
+        container.removeChild(grid);
+        input = prompt("What grid would you like?");
+    });
         const grid = document.createElement("div");
         grid.classList.add("grid");
         container.appendChild(grid);
-        // grid.textContent = i;
         grid.addEventListener("mouseover", (event) => {
             grid.setAttribute("style", "background: black;");
         });
-        
-        grid.addEventListener("mouseout", (event) => {
-            grid.setAttribute("");
-            });
+        // grid.addEventListener("mouseout", (event) => {
+        //     grid.setAttribute("style", "background: ");
+        //     });
     }
-
-    
+    //
 }
 
-
 Grid(16,16);
+
